@@ -8,7 +8,9 @@ header
   align-items: center;
   padding: 0 10px;
   justify-content: space-between;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
 }
 
 header .nav-bar ul{
@@ -21,4 +23,13 @@ header a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  header .nav-bar {
+    display: none;
+  }
+  header {
+    justify-content: center;
+  }
 }
