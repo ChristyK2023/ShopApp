@@ -1,0 +1,5 @@
+<h2>Date : {{ date | date:'dd/MM/YYYY' }}</h2>
+<div>Table : {{ products | json }}</div>
+<div class="product-list">
+  <app-product-item [product]="products[1]"></app-product-item>
+</div>
