@@ -54,11 +54,11 @@ export class ProductListComponent implements OnInit {
         description: 'Robe fendue à fines brides avec boutons',
         category: [ 'Robes', 'Femmes' ],
         imageUrl: [
-          '/assets/images/products/robe_robe_3/1.webp',
-          '/assets/images/products/robe_robe_3/2.webp',
-          '/assets/images/products/robe_robe_3/3.webp',
-          '/assets/images/products/robe_robe_3/4.webp'
-        ],
+          '/assets/images/products/robe_3/1.webp',
+          '/assets/images/products/robe_3/2.webp',
+          '/assets/images/products/robe_3/3.webp',
+          '/assets/images/products/robe_3/4.webp'
+   ],
         sold_price: 1299,
         regular_price: 4599,
         created_at: new Date()
@@ -206,6 +206,12 @@ export class ProductListComponent implements OnInit {
 
   getNumber(): number {
     return 3
+  }
+
+  handleDeleteProduct(product: Product) {
+    this.products = this.products.filter(p => p._id !== product._id)
+    //console.log("handleDeleteProduct : ", product);
+
   }
 
 /*

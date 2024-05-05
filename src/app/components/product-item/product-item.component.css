@@ -5,10 +5,15 @@
 .product-item {
   text-align: center;
   border: 0.1px solid #ccc;
-  width: 200px;
+  width: 300px;
+  height: 340px;
   cursor: pointer;
 }
 
+.product-item .product-image img{
+  width: 200px;
+  height: 200px;
+}
 .product-item .product-details {
   font-size: 13px;
 }
