@@ -10,6 +10,8 @@ export class ProductListComponent implements OnInit {
 
   date: Date = new Date()
   products: Product[] = []
+  isDisplayModal: boolean = false
+  modalProduct: Product | undefined
 
   constructor () {
 
@@ -212,6 +214,20 @@ export class ProductListComponent implements OnInit {
     this.products = this.products.filter(p => p._id !== product._id)
     //console.log("handleDeleteProduct : ", product);
 
+  }
+
+
+  handleDisplayProductViewModal(product: Product) {
+    console.log("---------- handleDisplayProductViewModal ---------");
+    if (product) {
+      this.isDisplayModal = true
+      this.modalProduct = product
+    }
+  }
+
+  handleCloseModal() {
+    this.isDisplayModal = false
+    this.modalProduct   = undefined
   }
 
 /*

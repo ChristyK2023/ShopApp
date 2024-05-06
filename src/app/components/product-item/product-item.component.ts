@@ -11,6 +11,7 @@ export class ProductItemComponent implements OnInit {
  @Input() product: Product | undefined
 
  @Output() deleteProductItem: EventEmitter<Product> = new EventEmitter<Product>()
+ @Output() displayProductViewModal: EventEmitter<Product> = new EventEmitter<Product>()
 
   constructor () {
 
@@ -22,13 +23,12 @@ export class ProductItemComponent implements OnInit {
   }
 
   handleClickProduct(product: Product | undefined) {
-    console.log(product);
-
+    //console.log(product);
+    this.displayProductViewModal.emit(product)
   }
 
   deleteProduct(product: Product | undefined) {
     //console.log(product);
-    this.deleteProductItem.emit(product)
+    //this.deleteProductItem.emit(product)
   }
-
 }
